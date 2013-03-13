@@ -15,7 +15,7 @@ class MoviesEngine:
         myFile.close()
     def do_analysis(self):
         path = self.path
-        x = EngineOperations(path+"/movie.data", path+"/user.data", path+"/ratings.data", path+"/genre.data")
+        x = EngineOperations(path+"/small_movie.data", path+"/small_user.data", path+"/small_ratings.data", path+"/small_genre.data")
         x.top_movie_by_genre()
         x.top_movie_by_year()
         x.top_movie_by_genre_and_year()

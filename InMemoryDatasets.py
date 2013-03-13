@@ -4,7 +4,6 @@ Created on 12-Mar-2013
 @author: rahul
 '''
 from DataSetsSchema import *
-import os
 
 class InMemoryDatasets:
     
@@ -22,7 +21,6 @@ class InMemoryDatasets:
 #            print (key, self.movies[key].title)
             
     def create_movie_master(self,movie_file):
-        
         moviesMaster = {}
         myFile = open(movie_file)
         for line in myFile.readlines():
@@ -54,6 +52,7 @@ class InMemoryDatasets:
         for line in myFile.readlines():
             line = line [:-1]
             data = line.split()
+            #print data
             temp = Rating(data[0],data[1],data[2],data[3])
             ratingsMaster.append(temp)
                 

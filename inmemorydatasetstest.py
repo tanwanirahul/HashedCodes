@@ -12,11 +12,11 @@ class TestSequenceFunctions(unittest.TestCase):
         pass
 
     def test_movie_master(self):
-        inmemory = InMemoryDatasets("/home/rahul/small_movie.data", "", "")
-        movies = inmemory.create_movie_master()
+        inmemory = InMemoryDatasets("/home/rahul/Datasets/small_movie.data", "/home/rahul/Datasets/small_user.data", "/home/rahul/Datasets/small_ratings.data","/home/rahul/Datasets/small_genre.data")
+       # movies = inmemory.create_movie_master()
         
-        self.assertEqual(movies['1'].title, 'Toy Story (1995)')
-
+        self.assertEqual(inmemory.movies['1'].title, 'Toy Story (1995)')
+        self.assertEqual(inmemory.movies['6'].total_rates, 2)
+        self.assertEqual(inmemory.movies['7'].rates_count, 3)
+        
     
-if __name__ == '__main__':
-    unittest.main()

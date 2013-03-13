@@ -4,7 +4,6 @@ Created on 13-Mar-2013
 @author: rahul
 '''
 from InMemoryDatasets import InMemoryDatasets
-import os
 class EngineOperations:
     
     
